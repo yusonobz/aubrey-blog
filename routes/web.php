@@ -16,6 +16,4 @@ Route::get('/', function () {
     return redirect('article');
 });
 
-// Test update repo
-
 Route::resource('article', 'ArticlesController');
