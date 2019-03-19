@@ -3,8 +3,10 @@
 @section('main-content')
 
 <h1 class="display-2 text-center">{{ $article->title }}</h1>
-<img src="{{ asset('/images/') }}/{{ $article->photo }}" class="mx-auto d-block" />
-<br>
-<h5 class="text-center">{{ $article->content }}</h5>
-
+<div class="container">
+    <div class="row">
+        <div class="col"><p>{{ $article->content }}</p></div>
+        <div class="col"><img src="{{ asset('/images/') }}/{{ $article->photo }}" class="img-fluid" width="460" height="345"/></div>
+    </div>
+</div>
 @endsection
