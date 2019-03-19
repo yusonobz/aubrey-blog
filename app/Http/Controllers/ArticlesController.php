@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Articles;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class ArticlesController extends Controller
 {
@@ -14,7 +15,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Articles::all();
+        $articles = Articles::paginate(5);;
         return view('article.index',compact('articles'));
     }
 
